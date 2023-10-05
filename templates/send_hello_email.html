@@ -1,0 +1,95 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>SEND HELLO</title>
+    <link rel="stylesheet" href="{% static './style.css' %}">
+    <link rel="icon" href="./favicon.ico" type="image/x-icon">
+    <style>
+        .home-button {
+            position: absolute;
+            top: 10px;
+            left: 10px;
+            z-index: 1000; /* To ensure it appears above other elements */
+        }
+        .home-icon {
+            width: 50px; /* Adjust this value to change the width */
+            height: 50px; /* Adjust this value to change the height */
+        }
+      body {
+        font-family: Arial, sans-serif;
+        background-color: #f4f4f4;
+        margin: 0;
+        padding: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+    }
+
+    form {
+        background-color: #fff;
+        padding: 20px;
+        border-radius: 5px;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    }
+
+    form input {
+        width: 100%;
+        padding: 10px;
+        margin: 5px 0;
+        border: 1px solid #ccc;
+        border-radius: 3px;
+    }
+
+    form input[type="submit"] {
+        background-color: #007bff;
+        color: #fff;
+        border: none;
+        cursor: pointer;
+    }
+
+    form input[type="submit"]:hover {
+        background-color: #0056b3;
+    }
+
+    div {
+        text-align: center;
+        margin-top: 10px;
+    }
+
+    h3 {
+        color: #007bff;
+    }
+        
+    </style>
+</head>
+<body>
+    <a href="{% url 'index' %}" class="home-button">
+        <img src="{% static 'home_page_icon\home_page.png' %}" alt="Home" class="home-icon" title="Go To Home Page">
+    </a>
+
+    <form method="post">
+        {% csrf_token %}
+        
+        <input type="text" name="name" placeholder="Name"><br>
+        <input type="email" name="email" placeholder="Email"><br>
+        <input type="submit" value="SendHello">
+        <a href="send_your_own_msg">send your own message</a>
+        {% if messages %}
+        {% for message in messages %}
+            <div class="popup">
+                {{ message }}
+                <span class="close-button" onclick="this.parentElement.style.display='none'">&times;</span>
+            </div>
+        {% endfor %}
+        {% endif %}
+
+    </form>
+    
+</body>
+</html>
