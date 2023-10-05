@@ -31,7 +31,7 @@ def send_your_own_msg(request):
     if request.method=="POST":
         form = EmailForm(request.POST)
         if form.is_valid():
-            subject = form.cleaned_data['subject']
+            subject = form.cleaned_data['subject'] 
             message = form.cleaned_data['message']
             recipient = form.cleaned_data['recipient']
             send_mail(subject, message, settings.EMAIL_HOST_USER, [recipient])
