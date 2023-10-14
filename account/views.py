@@ -18,7 +18,7 @@ def login(request):
             messages.info(request, 'invalid credentials')
             return redirect('login')
     else:
-        return render(request, 'login1.html') 
+        return render(request, 'login2.html') 
    
 
 def register(request):
@@ -48,7 +48,7 @@ def register(request):
             return redirect('register')    
     else:
 
-        return render(request, 'register1.html')
+        return render(request, 'register2.html')
 
 
 def logout(request):
