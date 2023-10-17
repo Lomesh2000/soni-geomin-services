@@ -31,6 +31,7 @@ ALLOWED_HOSTS = []
 # Application definition
 
 INSTALLED_APPS = [
+    'rest_framework',
     'travello.apps.TravelloConfig',
     "django.contrib.admin",
     "django.contrib.auth",
@@ -48,6 +49,7 @@ MIDDLEWARE = [
     "django.contrib.auth.middleware.AuthenticationMiddleware",
     "django.contrib.messages.middleware.MessageMiddleware",
     "django.middleware.clickjacking.XFrameOptionsMiddleware",
+    # "django_project.favicon_middleware.FaviconMiddleware",
 ]
 
 ROOT_URLCONF = "django_project.urls"

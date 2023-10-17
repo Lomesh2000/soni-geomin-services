@@ -5,7 +5,7 @@
 <html lang="en">
 <head>
 <title>MINING</title>
-<link rel="icon" type="image/png" href="{% static 'images/SGS_logo.png' %}">
+<link rel="icon" type="image/png" href="{% static 'images/SGS_logo_clean.png' %}">
 <meta charset="utf-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="description" content="Travello template project">
@@ -39,7 +39,7 @@
 				<div class="col">
 					<div class="header_content d-flex flex-row align-items-center justify-content-start">
 						<div class="header_content_inner d-flex flex-row align-items-end justify-content-start">
-							<a href='/'><img src="{% static  'images/SGS_logo.png' %}" alt="Site Logo" class="logo"></a>
+							<a href='/'><img src="{% static  'images/SGS_logo_without_background_clean.png' %}" alt="Site Logo" class="logo"></a>
 							<div class="logo"><a href="/">Geo-Min Services</a></div>
 							<nav class="main_nav">
 								<ul class="d-flex flex-row align-items-start justify-content-start">
@@ -141,13 +141,13 @@
 
 				<!-- Slide -->
 				<div class="owl-item">
-					<div class="background_image" style="background-image:url({% static 'images/home_slider.jpg' %})"></div>
+					<div class="background_image" style="background-image:url({% static 'images/drone_survey_1.jpg' %})"></div>
 					<div class="home_slider_content_container">
 						<div class="container">
 							<div class="row">
 								<div class="col">
 									<div class="home_slider_content">
-										<div class="home_title"><h2>Let Get Your Work Done</h2></div>
+										<div class="home_title"><h2>Lets Get Your Work Drone </h2></div>
 									</div>
 								</div>
 							</div>
@@ -157,7 +157,7 @@
 
 				<!-- Slide -->
 				<div class="owl-item">
-					<div class="background_image" style="background-image:url({% static 'images/home_slider.jpg' %})"></div>
+					<div class="background_image" style="background-image:url({% static 'images/drone_survey.jpg' %})"></div>
 					<div class="home_slider_content_container">
 						<div class="container">
 							<div class="row">
@@ -173,7 +173,7 @@
 
 				<!-- Slide -->
 				<div class="owl-item">
-					<div class="background_image" style="background-image:url({% static 'images/home_slider.jpg' %}"></div>
+					<div class="background_image" style="background-image:url({% static 'images/drone_survey.jpg' %}"></div>
 					<div class="home_slider_content_container">
 						<div class="container">
 							<div class="row">
@@ -214,7 +214,7 @@
 									<input type="text" class="search_input search_input_2" placeholder="State" required="required">
 									<input type="text" class="search_input search_input_3" placeholder="Company" required="required">
 									<input type="text" class="search_input search_input_4" placeholder="Budget" required="required">
-									<button class="home_search_button">search</button>
+									<button class="home_search_button">Lets Discuss</button>
 								</div>
 							</form>
 						</div>
@@ -227,7 +227,7 @@
 	<!-- Intro -->
 
 	<div class="intro">
-		<div class="intro_background" style="background-image:url({% static 'images/intro.png' %})"></div>
+		{% comment %} <div class="intro_background" style="background-image:url({% static 'images/drone_only.png' %})"></div> {% endcomment %}
 		<div class="container">
 			<div class="row">
 				<div class="col">
@@ -237,10 +237,10 @@
 							<!-- Intro Item -->
 							<div class="col-lg-4 intro_col">
 								<div class="intro_item d-flex flex-row align-items-end justify-content-start">
-									<div class="intro_icon"><img src="{% static 'images/beach.svg' %}" alt=""></div>
+									<div class="intro_icon"><img src="{% static 'images/land-surveyor-icon.svg' %}" alt=""></div>
 									<div class="intro_content">
-										<div class="intro_title">Top Destinations</div>
-										<div class="intro_subtitle"><p>Nulla pretium tincidunt felis, nec.</p></div>
+										<div class="intro_title">Top Quality</div>
+										{% comment %} <div class="intro_subtitle"><p>Quality </p></div> {% endcomment %}
 									</div>
 								</div>
 							</div>
@@ -248,10 +248,10 @@
 							<!-- Intro Item -->
 							<div class="col-lg-4 intro_col">
 								<div class="intro_item d-flex flex-row align-items-end justify-content-start">
-									<div class="intro_icon"><img src="{% static 'images/wallet.svg' %}" alt=""></div>
+									<div class="intro_icon"><img src="{% static 'images/drone.png' %}" alt=""></div>
 									<div class="intro_content">
-										<div class="intro_title">The Best Prices</div>
-										<div class="intro_subtitle"><p>Sollicitudin mauris lobortis in.</p></div>
+										<div class="intro_title">Best Equipments</div>
+										{% comment %} <div class="intro_subtitle"><p>Sollicitudin mauris lobortis in.</p></div> {% endcomment %}
 									</div>
 								</div>
 							</div>
@@ -259,10 +259,10 @@
 							<!-- Intro Item -->
 							<div class="col-lg-4 intro_col">
 								<div class="intro_item d-flex flex-row align-items-end justify-content-start">
-									<div class="intro_icon"><img src="{% static 'images/suitcase.svg' %}" alt=""></div>
+									<div class="intro_icon"><img src="{% static 'images/review.png' %}" alt=""></div>
 									<div class="intro_content">
 										<div class="intro_title">Amazing Services</div>
-										<div class="intro_subtitle"><p>Nulla pretium tincidunt felis, nec.</p></div>
+										{% comment %} <div class="intro_subtitle"><p>Nulla pretium tincidunt felis, nec.</p></div> {% endcomment %}
 									</div>
 								</div>
 							</div>
@@ -280,15 +280,15 @@
 		<div class="container">
 			<div class="row">
 				<div class="col text-center">
-					<div class="section_subtitle">simply amazing places</div>
-					<div class="section_title"><h2>Popular Destinations</h2></div>
+					<div class="section_subtitle">Simply Amazing Companies</div>
+					<div class="section_title"><h2>Projects We Worked On</h2></div>
 				</div>
 			</div>
 			<div class="row destinations_row">
 				<div class="col">
 					<div class="destinations_container item_grid">
 
-						{% for dest in dests %}
+						{% comment %} {% for dest in dests %}
 
 						<!-- Destination -->
 						<div class="destination item">
@@ -306,7 +306,25 @@
 							</div>
 						</div>
 
-						{% endfor %}
+						{% endfor %} {% endcomment %}
+
+						
+						{% for project in projects %}
+
+						<!-- PRojects -->
+						<div class="destination item">
+							<div class="destination_image">
+								<img src="{{project.img.url}}" alt="">
+								{% comment %} <img src="media\projects_pics\ultratech.jpg" alt=""> {% endcomment %}
+							</div>
+							<div class="destination_content">
+								<div class="destination_title"><a href="destinations/{{project.company_name|lower}}">{{project.company_name}}</a></div>
+								<div class="destination_subtitle"><p>{{project.desc}}</p></div>
+								<div class="destination_price">{{project.equipments_used}}</div>
+							</div>
+						</div>
+
+						{% endfor %} 
 
 					</div>
 				</div>
@@ -317,7 +335,7 @@
 	<!-- Testimonials -->
 
 	<div class="testimonials" id="testimonials">
-		<div class="parallax_background parallax-window" data-parallax="scroll" data-image-src="{% static 'images/testimonials.jpg' %}" data-speed="0.8"></div>
+		<div class="parallax_background parallax-window" data-parallax="scroll" data-image-src="{% static 'images/testimonials.jpeg' %}" data-speed="0.8"></div>
 		<div class="container">
 			<div class="row">
 				<div class="col text-center">
@@ -334,10 +352,10 @@
 
 							<!-- Slide -->
 							<div class="owl-item text-center">
-								<div class="testimonial">Lorem ipsum dolor sit amet, consectetur adipiscing elit. lobortis dolor. Cras placerat lectus a posuere aliquet. Curabitur quis vehicula odio.</div>
+								<div class="testimonial">Drone Survey in Gujarat</div>
 								<div class="testimonial_author">
 									<div class="testimonial_author_content d-flex flex-row align-items-end justify-content-start">
-										<div>john turner,</div>
+										<div>Ultratech Cement</div>
 										<div>client</div>
 									</div>
 								</div>
@@ -345,10 +363,10 @@
 
 							<!-- Slide -->
 							<div class="owl-item text-center">
-								<div class="testimonial">Lorem ipsum dolor sit amet, consectetur adipiscing elit. lobortis dolor. Cras placerat lectus a posuere aliquet. Curabitur quis vehicula odio.</div>
+								<div class="testimonial">Drone Survey in Rajasthan</div>
 								<div class="testimonial_author">
 									<div class="testimonial_author_content d-flex flex-row align-items-end justify-content-start">
-										<div>john turner,</div>
+										<div>J.K. White</div>
 										<div>client</div>
 									</div>
 								</div>
@@ -356,10 +374,10 @@
 
 							<!-- Slide -->
 							<div class="owl-item text-center">
-								<div class="testimonial">Lorem ipsum dolor sit amet, consectetur adipiscing elit. lobortis dolor. Cras placerat lectus a posuere aliquet. Curabitur quis vehicula odio.</div>
+								<div class="testimonial">Mine Survey in Uttrakhand</div>
 								<div class="testimonial_author">
 									<div class="testimonial_author_content d-flex flex-row align-items-end justify-content-start">
-										<div>john turner,</div>
+										<div>Shree Cement</div>
 										<div>client</div>
 									</div>
 								</div>
@@ -381,7 +399,7 @@
 
 	<!-- News -->
 
-	<div class="news" id="news">
+	{% comment %} <div class="news" id="news">
 		<div class="container">
 			<div class="row">
 				<div class="col-xl-8">
@@ -472,12 +490,12 @@
 				</div>
 			</div>
 		</div>
-	</div>
+	</div> {% endcomment %}
 
 	<!-- Footer -->
 
 	<footer class="footer">
-		<div class="parallax_background parallax-window" data-parallax="scroll" data-image-src="{% static 'images/footer_1.jpg' %}" data-speed="0.8"></div>
+		<div class="parallax_background parallax-window" data-parallax="scroll" data-image-src="{% static 'images/mc.jpg' %}" data-speed="0.8"></div>
 		<div class="container">
 			<div class="row">
 				<div class="col">

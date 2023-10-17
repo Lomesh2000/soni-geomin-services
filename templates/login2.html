@@ -1,3 +1,4 @@
+{% load static %}
 <html lang="pt-BR">
 <head>
   <meta charset="UTF-8">
@@ -5,10 +6,21 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Login Page</title>
+  <link rel="icon" type="image/png" href="{% static 'images/SGS_logo_clean.png' %}">
 
 
 
   <style>
+    .home-button {
+        position: absolute;
+        top: 10px;
+        left: 10px;
+        z-index: 1000; /* To ensure it appears above other elements */
+    }
+    .home-icon {
+        width: 50px; /* Adjust this value to change the width */
+        height: 50px; /* Adjust this value to change the height */
+    }
     @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap');
 
 *{
@@ -241,6 +253,9 @@ body{
 </head>
 
 <body>
+    <a href="{% url 'index' %}" class="home-button">
+        <img src="{% static 'images/SGS_logo_without_background_clean.png' %}" alt="Home" class="home-icon" title="Go To Home Page">
+    </a>
   <div class="container" id="container">
     {% comment %} <div class="form-container sign-up">
       <form method="post" id="signup">
@@ -290,6 +305,7 @@ body{
         </div>
         <div class="toggle-panel toggle-right">
           <h1>Hello</h1>
+          <h2>New User?</h2>
           <p>Register with your Personal details to get your work done</p>
           {% comment %} <button class="hidden" id="register" href='register'>Sign Up</button> {% endcomment %}
           <a href='register'><button class="hidden" id="register" href='register'>Sign Up</button></a>
