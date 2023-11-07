@@ -16,5 +16,8 @@ class Projects(models.Model):
     img = models.ImageField(upload_to='projects_pics')
     desc = models.TextField()
     equipments_used = models.TextField()
+
+    # def __str__(self):
+    #     return self.company_name
     
     

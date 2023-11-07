@@ -1,6 +1,6 @@
 from django.shortcuts import render, get_object_or_404, redirect
 # Create your views here.
-from travello.models import Destination
+from travello.models import Destination, Projects
 from django.contrib.auth.models import auth, User
 from django.contrib.auth.decorators import login_required
 
@@ -16,6 +16,7 @@ def mumbai(request):
 def delhi(request):
     return render(request, 'destinations.html', {'name':'delhi'})
 
+
 @login_required(login_url='login')
 def bangalore(request):
     return render(request, 'destinations.html', {'name':'bangalore'})
@@ -25,6 +26,11 @@ def bangalore(request):
 def ultratech(request):
     return render(request, 'destinations.html', {'name':'ultratech'})
 
-# def destination(request, city_name):
-#     city = get_object_or_404(Destination, name=city_name)
-#     return render(request, 'destinations.html', {'name':city.name})
+
+## dynamically creating urls for the data pressent
+@login_required(login_url="login")
+def dynamic_url(request,id):
+    
+    item = get_object_or_404(Projects, id = id)
+    return render(request, 'destinations.html', {'item':item})
+
